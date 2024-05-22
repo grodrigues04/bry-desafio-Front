@@ -17,6 +17,7 @@ export class EmployeeCreateComponent {
   email!:string
   address!:string
   password!:string
+  errors:any = []
   saveEmployee(){
     console.log('RODEI')
     let inputDate = {
@@ -32,7 +33,9 @@ export class EmployeeCreateComponent {
         console.log(res)
       },
       error:(err:any)=>{
-        console.log(err.error.message)
+        let errorMessage =  err.error.message
+        this.errors = errorMessage
+        console.log(errorMessage)
       }
     })
 

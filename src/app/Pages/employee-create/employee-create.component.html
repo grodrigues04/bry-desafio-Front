@@ -11,25 +11,35 @@
                     <div class="mb-3">
                         <label>Login</label>
                         <input type="text" [(ngModel)]="login" name="login" class="form-control">
+                        <span *ngIf="errors.login" class="text-danger">{{errors.login[0]}}</span>
                     </div>
                     <div class="mb-3">
                         <label>Name</label>
                         <input type="text" [(ngModel)]="name" name="name" class="form-control">
+                        <span *ngIf="errors.name" class="text-danger">{{errors.login[0]}}</span>
                     </div>
                     <div class="mb-3">
                         <label>CPF</label>
                         <input type="number" [(ngModel)]="cpf" name="cpf" class="form-control">
+                        <span *ngIf="errors.cpf" class="text-danger">{{errors.login[0]}}</span>
+
                     </div>
                     <div class="mb-3">
                         <label>Email</label>
                         <input type="email" [(ngModel)]="email" name="email" class="form-control">
+                        <span *ngIf="errors.email" class="text-danger">{{errors.login[0]}}</span>
+
                     </div>
                     <div class="mb-3">
                         <label>Address</label>
                         <input type="text" [(ngModel)]="address" name="address" class="form-control">
+                        <span *ngIf="errors.address" class="text-danger">{{errors.login[0]}}</span>
+
                     </div><div class="mb-3">
                         <label>password</label>
                         <input type="password" [(ngModel)]="password" name="password" class="form-control">
+                        <span *ngIf="errors.password" class="text-danger">{{errors.login[0]}}</span>
+
                     </div>
                     <div class="mb-3">
                         <button type="submit" class="btn btn-primary">Create</button>
