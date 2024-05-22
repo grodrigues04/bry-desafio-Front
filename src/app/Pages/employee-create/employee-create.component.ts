@@ -31,6 +31,13 @@ export class EmployeeCreateComponent {
     this.employeeService.saveEmployee(inputDate).subscribe({
       next:(res:any)=>{
         console.log(res)
+        alert(res.message)
+        this.login = '',
+        this.name = '',
+        this.cpf = '',
+        this.email = '',
+        this.address = '',
+        this.password = ''
       },
       error:(err:any)=>{
         let errorMessage =  err.error.message
