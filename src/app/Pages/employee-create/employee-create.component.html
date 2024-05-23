@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-header">
                 <h4>Employee Create
-                    <a routerLink="/" class="btn btn-danger float-end">back</a>
+                    <a [routerLink]="['/employees/page']" class="btn btn-danger float-end">back</a>
                 </h4>
             </div>
             <div class="card-body">
@@ -36,7 +36,7 @@
                         <span *ngIf="errors.address" class="text-danger">{{errors.login[0]}}</span>
 
                     </div><div class="mb-3">
-                        <label>password</label>
+                        <label>Password</label>
                         <input type="password" [(ngModel)]="password" name="password" class="form-control">
                         <span *ngIf="errors.password" class="text-danger">{{errors.login[0]}}</span>
 

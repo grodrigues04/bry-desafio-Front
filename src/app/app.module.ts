@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './Pages/home-page/home-page.component';
 import { NavbarComponent } from './Pages/Partials/navbar/navbar.component';
 import { EmployeeCreateComponent } from './Pages/employee-create/employee-create.component';
+import { EmployeesPageComponent } from './Pages/employees-page/employees-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     NavbarComponent,
-    EmployeeCreateComponent
+    EmployeeCreateComponent,
+    EmployeesPageComponent
   ],
   imports: [
     BrowserModule,

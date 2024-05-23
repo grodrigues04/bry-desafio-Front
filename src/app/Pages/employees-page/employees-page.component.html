@@ -1,0 +1,50 @@
+<div>
+    <div class="mt-5 container ">
+        <div class="card">
+            <div class="card-header">
+                <h4>Employees List
+                    <a routerLink="/employee/create" class="btn btn-primary float-end">Add Employee</a>
+                </h4>  
+            </div>
+            <div class="card-body">
+                <table class="table tabl-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>CPF</th>
+                            <th>Email</th>
+                            <th>Login</th>
+                            <th>Password</th>
+                            <th>Address</th>
+                            <th>Company</th>
+                            <th>Created_at</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of this.employees">
+                            <td>{{item.id}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.cpf}}</td>
+                            <td>{{item.email}}</td>
+                            <td>{{item.login}}</td>
+                            <td>{{item.password}}</td>
+                            <td>{{item.address}}</td>
+                            <td>
+                                <span *ngFor="let comp of item.companies">
+                                  {{comp.name}}
+                                </span>
+                              </td>
+                            <td>{{item.created_at}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>  
+<script>
+    console.log(comp)
+</script>
