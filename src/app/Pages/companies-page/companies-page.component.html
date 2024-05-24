@@ -33,7 +33,7 @@
                             </td>
                             <td>
                                 <a routerLink="/company/edit/{{item.id}}" class="btn btn-success">Edit</a>
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="submit" (click)="deleteCompany($event,item.id)" class="btn btn-danger">Delete</button>
                             </td>
 
                         </tr>

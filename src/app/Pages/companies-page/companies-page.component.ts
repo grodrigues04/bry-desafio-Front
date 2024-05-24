@@ -20,4 +20,12 @@ export class CompaniesPageComponent {
       console.log(res)
     });
   }
+  deleteCompany(event:any ,companyId:number){
+    if(confirm('Are you sure you want to delet?')){
+      event.target.innerText = "Deleting..."
+      this.companyService.destroyCompany(companyId).subscribe((res:any)=>{
+        this.getCompanyList();
+      })
+    }
+  }
 }

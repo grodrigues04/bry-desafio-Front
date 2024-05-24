@@ -29,4 +29,7 @@ export class CompanyService {
   updateCompany(companyId:number,inputData:object){
     return this.httpCliente.patch(`http://localhost:8000/api/companies/edit/${companyId}`,inputData)
   }
+  destroyCompany(companyId:Number){
+    return this.httpCliente.delete(`http://localhost:8000/api/companies/delete/${companyId}`)
+  }
 }
