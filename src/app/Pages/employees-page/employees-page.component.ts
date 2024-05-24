@@ -17,8 +17,6 @@ export class EmployeesPageComponent {
   }
   getEmployeeList(){
     this.employeeService.getEmployeeList().subscribe((res:any)=>{
-      console.log('rodemo')
-      console.log(res)
       this.employees = res;
     });
   }
