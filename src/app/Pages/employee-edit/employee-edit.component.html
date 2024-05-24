@@ -1,0 +1,48 @@
+<div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Employee Edit
+                    <a [routerLink]="['/employees/page']" class="btn btn-danger float-end">back</a>
+                </h4>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="updateEmployee()">
+                    <div class="mb-3">
+                        <label>Login</label>
+                        <input type="text" [(ngModel)]="employee.login" name="login" class="form-control">
+                        <span *ngIf="errors.login" class="text-danger">{{errors.login[0]}}</span>
+                    </div>
+                    <div class="mb-3">
+                        <label>Name</label>
+                        <input type="text" [(ngModel)]="employee.name" name="name" class="form-control" >
+                        <span *ngIf="errors.name" class="text-danger">{{errors.name[0]}}</span>
+                    </div>
+                    <div class="mb-3">
+                        <label>CPF</label>
+                        <input type="number" [(ngModel)]="employee.cpf" name="cpf" class="form-control" >
+                        <span *ngIf="errors.cpf" class="text-danger">{{errors.cpf[0]}}</span>
+                    </div>
+                    <div class="mb-3">
+                        <label>Email</label>
+                        <input type="email" [(ngModel)]="employee.email" name="email" class="form-control">
+                        <span *ngIf="errors.email" class="text-danger">{{errors.email[0]}}</span>
+                    </div>
+                    <div class="mb-3">
+                        <label>Address</label>
+                        <input type="text" [(ngModel)]="employee.address" name="address" class="form-control">
+                        <span *ngIf="errors.address" class="text-danger">{{errors.address[0]}}</span>
+                    </div>
+                    <div class="mb-3">
+                        <label>Password</label>
+                        <input type="password" [(ngModel)]="employee.password" name="password" class="form-control">
+                        <span *ngIf="errors.password" class="text-danger">{{errors.password[0]}}</span>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

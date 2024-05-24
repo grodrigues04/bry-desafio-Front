@@ -35,8 +35,12 @@
                                 <span *ngFor="let company of item.companies; let last = last">
                                     {{company.name}}{{!last ? ', ' : '.'}}
                                 </span>
-                              </td>
+                            </td>
                             <td>{{item.created_at}}</td>
+                            <td>
+                                <a routerLink="/employee/edit/{{item.id}}" class="btn btn-success">Edit</a>
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

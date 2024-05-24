@@ -23,7 +23,14 @@ export class EmployeeService {
   getEmployeeList(){
     return this.httpCliente.get('http://localhost:8000/api/employees')
   }
+
+  getEmployee(employeId:number){
+    return this.httpCliente.get(`http://localhost:8000/api/employees/edit/${employeId}`)
+  }
   saveEmployee(inputDate:object){
     return this.httpCliente.post('http://localhost:8000/api/employees',inputDate)
+  }
+  updateEmployee(employeeId: number, inputData: object) {
+    return this.httpCliente.patch(`http://localhost:8000/api/employees/edit/${employeeId}`, inputData);
   }
 }

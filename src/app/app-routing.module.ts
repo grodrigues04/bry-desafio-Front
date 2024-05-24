@@ -6,12 +6,15 @@ import { EmployeeCreateComponent } from './Pages/employee-create/employee-create
 import { EmployeesPageComponent } from './Pages/employees-page/employees-page.component';
 import { CompaniesPageComponent } from './Pages/companies-page/companies-page.component';
 import { CompanyCreateComponent } from './Pages/company-create/company-create.component';
+import { EmployeeEditComponent } from './Pages/employee-edit/employee-edit.component';
 
 const routes: Routes = [
   {path:"", component:HomePageComponent, title:"Home page"},
   //Employee Routes:
-  {path:"employee/create", component:EmployeeCreateComponent},
+  {path:"employee/create", component: EmployeeCreateComponent},
   {path:"employees/page", component: EmployeesPageComponent},
+  {path:"employee/edit/:id", component: EmployeeEditComponent},
+
   //Company Routes:
   {path:"company/create", component: CompanyCreateComponent},
   {path:"companies/page", component: CompaniesPageComponent},
