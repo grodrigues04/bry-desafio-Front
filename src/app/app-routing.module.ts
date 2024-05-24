@@ -7,7 +7,7 @@ import { EmployeesPageComponent } from './Pages/employees-page/employees-page.co
 import { CompaniesPageComponent } from './Pages/companies-page/companies-page.component';
 import { CompanyCreateComponent } from './Pages/company-create/company-create.component';
 import { EmployeeEditComponent } from './Pages/employee-edit/employee-edit.component';
-
+import { CompanyEditComponent } from './Pages/company-edit/company-edit.component';
 const routes: Routes = [
   {path:"", component:HomePageComponent, title:"Home page"},
   //Employee Routes:
@@ -18,6 +18,7 @@ const routes: Routes = [
   //Company Routes:
   {path:"company/create", component: CompanyCreateComponent},
   {path:"companies/page", component: CompaniesPageComponent},
+  {path:"company/edit/:id", component: CompanyEditComponent}
 
 ];
 

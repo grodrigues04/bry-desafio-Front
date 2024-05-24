@@ -20,7 +20,13 @@ export class CompanyService {
   getCompanyList(){
     return this.httpCliente.get('http://localhost:8000/api/companies')
   }
+  getCompany(companyId:number){
+    return this.httpCliente.get(`http://localhost:8000/api/companies/edit/${companyId}`)
+  }
   saveCompany(inputDate:object){
     return this.httpCliente.post('http://localhost:8000/api/companies',inputDate)
+  }
+  updateCompany(companyId:number,inputData:object){
+    return this.httpCliente.patch(`http://localhost:8000/api/companies/edit/${companyId}`,inputData)
   }
 }

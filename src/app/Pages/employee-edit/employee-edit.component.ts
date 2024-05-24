@@ -26,7 +26,8 @@ export class EmployeeEditComponent implements OnInit {
   ngOnInit(){
     this.employee_id = Number(this.route.snapshot.paramMap.get('id'));
     this.employeeService.getEmployee(this.employee_id).subscribe(
-      (res: any) => {this.employee = {name:res.employee?.name,
+      (res: any) => {this.employee = {
+      name:res.employee?.name,
       login:res.employee?.login,
       cpf:res.employee?.cpf,
       address:res.employee?.address,
@@ -48,7 +49,9 @@ export class EmployeeEditComponent implements OnInit {
     this.employeeService.updateEmployee(this.employee_id, inputDate).subscribe(
       (res) => {
         console.log('Employee updated successfully', res);
-        //this.router.navigate(['/employees']); // Redirect to the employee list or any other page
+        alert('Company update successfully');
+
+        this.router.navigate(['/employees/page']); // Redirect to the employee list or any other page
       }
     );
   }
