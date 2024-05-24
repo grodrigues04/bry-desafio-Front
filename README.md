@@ -1,27 +1,9 @@
-# ProjectName
+<h2>Frontend do Desafio full stack para o processo seletivo Bry </h2>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Algumas melhorias para o frontEnd
 
-## Code scaffolding
+<h4>Homepage:</h4> A pagina inicial poderia receber diretamente as tabelas de employees e companies, sem necessariamente uma barra de navegação.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<h4>Relação many to many:</h4> Embora backend seja capaz de estabelecer uma relação many to many, o frontend não ficou intuitivo para exercer a funcionalidade. Na pagina "Create Employee" por exemplo, ao em vez de usar a tag select do html, a utilização de checkboxes poderia proporcionar uma experiência melhor para a criação de um emlployee que faça parte de varias empresas.
