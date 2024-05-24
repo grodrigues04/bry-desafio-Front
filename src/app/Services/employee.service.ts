@@ -21,7 +21,6 @@ export class EmployeeService {
 
   constructor(private httpCliente:HttpClient){}
   getEmployeeList(){
-    //console.log('getEmployeeList rodou')
     return this.httpCliente.get('http://localhost:8000/api/employees')
   }
   saveEmployee(inputDate:object){

@@ -32,8 +32,8 @@
                             <td>{{item.password}}</td>
                             <td>{{item.address}}</td>
                             <td>
-                                <span *ngFor="let comp of item.companies">
-                                  {{comp.name}}
+                                <span *ngFor="let company of item.companies; let last = last">
+                                    {{company.name}}{{!last ? ', ' : '.'}}
                                 </span>
                               </td>
                             <td>{{item.created_at}}</td>
@@ -45,6 +45,3 @@
 
     </div>
 </div>  
-<script>
-    console.log(comp)
-</script>

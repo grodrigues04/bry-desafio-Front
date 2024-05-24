@@ -1,0 +1,40 @@
+<div>
+    <div class="mt-5 container ">
+        <div class="card">
+            <div class="card-header">
+                <h4>Companies List
+                    <a routerLink="/company/create" class="btn btn-primary float-end">Add Company</a>
+                </h4>  
+            </div>
+            <div class="card-body">
+                <table class="table tabl-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Cnpj</th>
+                            <th>Address</th>    
+                            <th>Created_at</th>
+                            <th>Employees</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of this.companies">
+                            <td>{{item.id}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.cnpj}}</td>
+                            <td>{{item.address}}</td>
+                            <td>{{item.created_at}}</td>
+                            <td>
+                                <span *ngFor="let employee of item.employees; let last = last">
+                                    {{employee.name}}{{!last ? ', ' : '.'}}
+                                  </span>                                  
+                              </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>  
