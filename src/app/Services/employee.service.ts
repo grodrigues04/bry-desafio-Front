@@ -33,4 +33,9 @@ export class EmployeeService {
   updateEmployee(employeeId: number, inputData: object) {
     return this.httpCliente.patch(`http://localhost:8000/api/employees/edit/${employeeId}`, inputData);
   }
+
+  detroyEmployee(employeeId:Number){
+    return this.httpCliente.delete(`http://localhost:8000/api/employees/delete/${employeeId}`)
+
+  }
 }

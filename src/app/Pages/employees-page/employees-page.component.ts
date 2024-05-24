@@ -20,4 +20,13 @@ export class EmployeesPageComponent {
       this.employees = res;
     });
   }
+
+  deleteEmployee(event:any,employeeId:number){
+    if(confirm('Are you sure you want to delet?')){
+      event.target.innerText = "Deleting..."
+      this.employeeService.detroyEmployee(employeeId).subscribe((res:any)=>{
+        this.getEmployeeList();
+      })
+    }
+  }
 }
