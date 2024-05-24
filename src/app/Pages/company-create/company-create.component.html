@@ -7,23 +7,30 @@
                 </h4>
             </div>
             <div class="card-body">
-                <form>
-                <!-- <form (ngSubmit)="saveCompany()"> -->
+                <form (ngSubmit)="saveCompany()">
                     <div class="mb-3">
                         <label>Name</label>
-                        <input type="text"  name="name" class="form-control">
-                        <!-- <span *ngIf="errors.name" class="text-danger">{{errors.login[0]}}</span> -->
+                        <input type="text" [(ngModel)]="name" name="name" class="form-control">
+                        <span *ngIf="errors.name" class="text-danger">{{errors.name[0]}}</span>
                     </div>
                     <div class="mb-3">
                         <label>CNPJ</label>
-                        <input type="number"  name="cpf" class="form-control">
-                        <!-- <span *ngIf="errors.cnpj" class="text-danger">{{errors.login[0]}}</span> -->
-
+                        <input type="number" [(ngModel)]="cnpj" name="cnpj" class="form-control">
+                        <span *ngIf="errors.cnpj" class="text-danger">{{errors.cnpj}}</span>
                     </div>
                     <div class="mb-3">
                         <label>Address</label>
-                        <input type="email"  name="email" class="form-control">
-                        <!-- <span *ngIf="errors.email" class="text-danger">{{errors.login[0]}}</span> -->
+                        <input type="text" [(ngModel)]="address" name="address" class="form-control">
+                        <span *ngIf="errors.address" class="text-danger">{{errors.email[0]}}</span>
+                    </div>
+                    <div class="mb-3">
+                        <label>Select company</label>
+                        <!-- <input type="number" [(ngModel)]="company_id" name="companies" class="form-control">
+                        <span *ngIf="errors.companies_id" class="text-danger">{{errors.login[0]}}</span> -->
+                        <select class="form-select" aria-label="Select company" name="company_id" [(ngModel)]="employee_id" required>
+                            <option [ngValue]="null" disabled>Select Employee</option>
+                            <option *ngFor="let company of this.employees" [ngValue]="company.id">{{company.name}}</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <button type="submit" class="btn btn-primary">Create</button>
