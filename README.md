@@ -1,8 +1,9 @@
 <h2>Frontend do Desafio full stack para o processo seletivo Bry </h2>
 
+Para o desafio, foi usado a versão 17.3.7 do framework Angular. O projeto foi iniciado com a configuração --no-standalone, para que os componentes sejam declados dentro de módulos.
+As rotas são definidas em src/app/app-routing.module.ts, que assim como no backend, temos os métodos GET, POST, PATCH, DELETE. Cada rota, tem seu component atribuido, onde é feito toda a lógica do componente. Além disso, employee e company tem seus próprios arquivos de service, que possuem as funções para realizar as requisições ao backend. 
 
-
-Algumas melhorias para o frontEnd
+<h3>Algumas melhorias para o frontEnd </h3>
 
 <h4>Homepage:</h4> A pagina inicial poderia receber diretamente as tabelas de employees e companies, sem necessariamente uma barra de navegação.
 
